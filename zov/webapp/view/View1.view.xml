@@ -5,9 +5,9 @@
     <Page id="page" title="{i18n>title}">
         <Button id="idButton" text="clique no botão." press="_onPress" />
 
-        <VBox class="sapUiTinyMargin">
-            <Label text="Id do Cliente"/>
-            <Input />
+        <VBox id="idVbox" class="sapUiTinyMargin">
+            <Label id="_IDGenLabel" text="Id do Cliente"/>
+            <Input id="_IDGenInput" />
         </VBox>
 
         <t:Table id="table1"
@@ -17,27 +17,27 @@
             class="sapUiTinyMargin"
             selectionMode="MultiToggle">
             <t:toolbar>
-                <OverflowToolbar>
+                <OverflowToolbar id="_IDGenOverflowToolbar">
                     <Title id="title" text="Ordens"></Title>
                 </OverflowToolbar>
             </t:toolbar>
             <t:columns>
-                <t:Column width="4rem" sortProperty="OrdemId">
-                    <Label text="OrdemId" />
+                <t:Column id="_IDGenColumn" width="4rem" sortProperty="OrdemId">
+                    <Label id="_IDGenLabel1" text="OrdemId" />
                     <t:template>
-                        <Text text="{OrdemId}" wrapping="false" />
+                        <Text id="_IDGenText" text="{OrdemId}" wrapping="false" />
                     </t:template>
                 </t:Column>
-                <t:Column width="10rem" sortProperty="ClienteId" filterProperty="ClienteId" autoResizable="true">
-                    <Label text="Id do cliente" />
+                <t:Column id="_IDGenColumn2" width="10rem" sortProperty="ClienteId" filterProperty="ClienteId" autoResizable="true">
+                    <Label id="_IDGenLabel2" text="Id do cliente" />
                     <t:template>
-                        <Text text="{ClienteId}" wrapping="false" />
+                        <Text id="_IDGenText1" text="{ClienteId}" wrapping="false" />
                     </t:template>
                 </t:Column>
-                <t:Column width="10rem" sortProperty="TotalItens" filterProperty="TotalItens" autoResizable="true">
-                    <Label text="Total Itens" />
+                <t:Column id="_IDGenColumn3" width="10rem" sortProperty="TotalItens" filterProperty="TotalItens" autoResizable="true">
+                    <Label id="_IDGenLabel3" text="Total Itens" />
                     <t:template>
-                        <Text text="{TotalItens}" wrapping="false" />
+                        <Text id="_IDGenText2" text="{TotalItens}" wrapping="false" />
                     </t:template>
                 </t:Column>
             </t:columns>
