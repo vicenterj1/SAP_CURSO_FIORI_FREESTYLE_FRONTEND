@@ -1,0 +1,7 @@
+<mvc:View controllerName="vicenterj.grandesprojetos.zov.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Button id="idButton" text="clique no botão." press="_onPress" />
+    </Page>
+</mvc:View>
