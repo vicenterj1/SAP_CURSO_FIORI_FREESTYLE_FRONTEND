@@ -44,6 +44,12 @@ function (Controller,MessageToast) {
 
         _onPress: function () {
             alert("Hello, World!");
+        },
+
+        ExibirMensagem: function(){
+
+            var sTitle = this.getView().getModel("i18n").getResourceBundle().getText("customerName");
+            alert(sTitle);
         }
     });
 });

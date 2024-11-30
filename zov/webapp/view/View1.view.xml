@@ -8,6 +8,8 @@
 
         <Text id="idText" text="{i18n>customerName}"/>
 
+        <Button id="idButton" text="Exibir mensagem." press="ExibirMensagem"></Button>
+
         <f:Form id="FormChange354" editable="true">
             <f:title>
                 <core:Title id="_IDGenTitle1" text="Calculadora" />
