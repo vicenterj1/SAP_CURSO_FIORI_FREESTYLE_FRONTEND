@@ -16,7 +16,7 @@ server:
             - /test-resources
           url: https://ui5.sap.com
         backend:
-          - path: /sap
+          - path: /sap/opu
             url: https://lnl-s4h.opustech.com.br:5200
             client: '200'
     - name: fiori-tools-appreload
