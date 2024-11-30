@@ -25,6 +25,10 @@
                     "odataVersion": "2.0"
                 }
             }
+        },
+        "usuarios": {
+            "uri": "model/usuarios.json",
+            "type": "JSON"
         }
     },
     "sap.ui": {
@@ -67,6 +71,10 @@
                 "dataSource": "mainService",
                 "preload": true,
                 "settings": {}
+            },
+            "usuarios": {
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "usuarios"
             }
         },
         "resources": {

@@ -83,5 +83,40 @@
             </f:formContainers>
         </f:Form>
         
+
+
+      <VBox id="_IDGenVBox" class="sapUiTinyMargin">
+        <Label id="_IDGenLabel" text="Model padrão da view (origem: controller)"/>
+        <Text id="_IDGenText" text="{/usuario/nome}"/>
+
+        <Text id="_IDGenText1" text="--------------------------------------------------"/>
+
+        <Label id="_IDGenLabel1" text="Model 'dados' da view (origem: controller)"/>
+        <Text id="_IDGenText2" text="{dados>/usuario/nome}"/>
+
+        <Text id="_IDGenText3" text="--------------------------------------------------"/>
+        
+        <Label id="_IDGenLabel2" text="Model i18n - chave title (origem: manifest)"/>
+        <Text id="_IDGenText4" text="{i18n>title}"/>
+
+        <Text id="_IDGenText5" text="--------------------------------------------------"/>
+
+        <Label id="_IDGenLabel3" text="Model 'usuarios' (origem: manifest)"/>
+        <Text id="_IDGenText6" text="{usuarios>/0/id} - {usuarios>/0/nome}"/>
+
+        <Text id="_IDGenText7" text="--------------------------------------------------"/>
+        
+        <Label id="_IDGenLabel4" text="Model padrão do serviço (origem: manifest)"/>
+        <List id="_IDGenList" headerText="Ordens" items="{ path: '/OVCabSet' }" >
+          <StandardListItem id="_IDGenStandardListItem" title="Ordem {OrdemId}" description="{CriadoPor}"/>
+        </List>
+
+        <Text id="_IDGenText8" text="{/OVCabSet(4)/OrdemId} - {/OVCabSet(4)/CriadoPor}"/>
+
+        <Text id="_IDGenText9" text="--------------------------------------------------"/>
+
+        <Button id="_IDGenButton2" text="Testar Models" press="onTestModels"/>
+      </VBox>
+
     </Page>
 </mvc:View>
