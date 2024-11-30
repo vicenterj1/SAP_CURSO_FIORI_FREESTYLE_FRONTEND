@@ -8,11 +8,13 @@ function (Controller,MessageToast) {
     return Controller.extend("vicenterj.grandesprojetos.zov.controller.View1", {
         onInit: function () {
 
+/*
             //alert("onInit");
             var oView = this.getView();
             var oModel = new sap.ui.model.json.JSONModel();
             oModel.setData({"usuario": {"nome": "Vicente"}});
-            oView.setModel(oModel,"dados2");
+            oView.setModel(oModel);
+*/
 
                 // model com o nome "dados"
                 var oView  = this.getView();
@@ -100,8 +102,8 @@ function (Controller,MessageToast) {
             console.log(oData);
             console.log("------------------------------------------");
 
-            var sText = oI18n.getText("welcomeMsg",[oData.usuario.nome]);
-            alert(sText);
+          //  var sText = oI18n.getText("welcomeMsg",[oData.usuario.nome]);
+          //  alert(sText);
             // model do serviço
             var oModel = this.getOwnerComponent().getModel();
             oModel.read("/OVCabSet",{
