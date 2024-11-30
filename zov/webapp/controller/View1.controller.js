@@ -7,18 +7,25 @@ function (Controller,MessageToast) {
 
     return Controller.extend("vicenterj.grandesprojetos.zov.controller.View1", {
         onInit: function () {
-/*
+
             //alert("onInit");
             var oView = this.getView();
             var oModel = new sap.ui.model.json.JSONModel();
             oModel.setData({"usuario": {"nome": "Vicente"}});
-            oView.setModel(oModel);
-*/
+            oView.setModel(oModel,"dados2");
+
                 // model com o nome "dados"
                 var oView  = this.getView();
                 var oModel = new sap.ui.model.json.JSONModel();
                 oModel.setData({"usuario": {"nome": "José"}});
                 oView.setModel(oModel,"dados");            
+
+                // model com o nome "dados"
+                var oView  = this.getView();
+                var oModel = new sap.ui.model.json.JSONModel();
+                oModel.setData({"usuario": {"nome": "Maria"}});
+                oView.setModel(oModel,"dados1");            
+
 
         },
 

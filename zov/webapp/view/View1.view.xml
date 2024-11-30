@@ -87,12 +87,17 @@
 
       <VBox id="_IDGenVBox" class="sapUiTinyMargin">
         <Label id="_IDGenLabel" text="Model padrão da view (origem: controller)"/>
-        <Text id="_IDGenText" text="{/usuario/nome}"/>
+        <Text id="_IDGenText" text="{dados1>/usuario/nome}"/>
 
         <Text id="_IDGenText1" text="--------------------------------------------------"/>
 
         <Label id="_IDGenLabel1" text="Model 'dados' da view (origem: controller)"/>
         <Text id="_IDGenText2" text="{dados>/usuario/nome}"/>
+
+        <Text id="_IDGenText11" text="--------------------------------------------------"/>
+
+        <Label id="_IDGenLabel11" text="Model 'dados2' da view (origem: controller)"/>
+        <Text id="_IDGenText21" text="{dados2>/usuario/nome}"/>
 
         <Text id="_IDGenText3" text="--------------------------------------------------"/>
         
