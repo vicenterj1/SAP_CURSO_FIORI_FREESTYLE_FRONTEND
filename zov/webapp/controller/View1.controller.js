@@ -8,6 +8,11 @@ function (Controller,MessageToast) {
     return Controller.extend("vicenterj.grandesprojetos.zov.controller.View1", {
         onInit: function () {
             //alert("onInit");
+            var oView = this.getView();
+            var oModel = new sap.ui.model.json.JSONModel();
+            oModel.setData({"usuario": {"nome": "Vicente"}});
+            oView.setModel(oModel);
+
         },
 
         onBeforeRendering: function(){
@@ -46,10 +51,25 @@ function (Controller,MessageToast) {
             alert("Hello, World!");
         },
 
-        ExibirMensagem: function(){
+        ExibirMensagem01: function(){
 
             var sTitle = this.getView().getModel("i18n").getResourceBundle().getText("customerName");
             alert(sTitle);
+        },
+
+        ExibirMensagem02: function(){
+
+            var oI18n  = this.getView().getModel("i18n").getResourceBundle();
+            var oModel = this.getView().getModel();
+            var oData  = oModel.getData();
+
+            // MessageToast
+            // sap.m.MessageToast
+            
+            //oView.destroy();
+            var sText = oI18n.getText("welcomeMsg",[oData.usuario.nome]);
+            alert(sText);
         }
+
     });
 });
