@@ -26,7 +26,29 @@ function (Controller,MessageToast) {
                 var oView  = this.getView();
                 var oModel = new sap.ui.model.json.JSONModel();
                 oModel.setData({"usuario": {"nome": "Maria"}});
-                oView.setModel(oModel,"dados1");            
+                oView.setModel(oModel,"dados1");  
+                
+                
+                /* */
+                // model padrão da view
+                var oView  = this.getView();
+                var oModel = new sap.ui.model.json.JSONModel();
+                oModel.setData({"usuario": {"nome": "Vicente"}});
+
+                var oModel1 = new sap.ui.model.json.JSONModel();
+                oModel1.setData({"usuario": {"nome": "José"}});
+                oModel1.setDefaultBindingMode(sap.ui.model.BindingMode.OneWay);
+                oView.setModel(oModel1,"oneway");
+
+                var oModel2 = new sap.ui.model.json.JSONModel();
+                oModel2.setData({"usuario": {"nome": "José"}});
+                oModel2.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
+                oView.setModel(oModel2,"twoway");
+
+                var oModel3 = new sap.ui.model.json.JSONModel();
+                oModel3.setData({"usuario": {"nome": "José"}});
+                oModel3.setDefaultBindingMode(sap.ui.model.BindingMode.OneTime);
+                oView.setModel(oModel3,"onetime");
 
 
         },
@@ -116,8 +138,43 @@ function (Controller,MessageToast) {
                     console.log(oError);
                 }
             });
-        }        
+        },
+        
+        onTestOneWay: function(){
+            var oView  = this.getView();
+            var oModel = oView.getModel("oneway");
+            var oData  = oModel.getData();
+            oData.usuario.nome += ".";
+            oModel.setData(oData);
+            oView.setModel(oModel);
+            
+            
+            // model com o nome "dados"
+        },
+        onTestTwoWay: function(){
+            var oView  = this.getView();
+            var oModel = new sap.ui.model.json.JSONModel();
+            oModel.setData({"usuario": {"nome": "José"}});
+            oView.setModel(oModel,"dados");
+            
+            var oModel = oView.getModel("twoway");
+            var oData  = oModel.getData();
+            oData.usuario.nome += ".";
+            oModel.setData(oData);
+            oView.setModel(oModel);
+        },
 
+
+        onTestOneTime: function(){
+            var oView  = this.getView();
+            
+            var oModel = oView.getModel("onetime");
+            var oData  = oModel.getData();
+            debugger;
+            oData.usuario.nome += ".";
+            oModel.setData(oData);
+            oView.setModel(oModel);
+        }
 
     });
 });
