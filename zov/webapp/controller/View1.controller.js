@@ -174,6 +174,16 @@ function (Controller,MessageToast) {
             oData.usuario.nome += ".";
             oModel.setData(oData);
             oView.setModel(oModel);
+        },
+
+        onNewCustomer: function(){
+            var r = sap.ui.core.UIComponent.getRouterFor(this);
+            r.navTo("RouteCustomerNew");
+        },
+
+        onEditCustomer1: function(){
+            var r = sap.ui.core.UIComponent.getRouterFor(this);
+            r.navTo("RouteCustomerEdit",{CustomerId:1});
         }
 
     });

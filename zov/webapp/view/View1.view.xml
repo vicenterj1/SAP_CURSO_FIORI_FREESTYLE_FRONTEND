@@ -150,5 +150,13 @@
         <Button id="_IDGenButton6" text="One Time - Adicionar Ponto Final" press="onTestOneTime"/>
       </VBox>
 
+    <Text id="_IDGenText911" text="--------------------------------------------------"/>
+    <Text id="_IDGenText922" text="--------------------------------------------------"/>
+
+    <VBox id="_IDGenVBox3" class="sapUiTinyMargin">
+        <Button id="_IDGenButton1" text="Novo CLiente" press="onNewCustomer"/>
+        <Button id="_IDGenButton5" text="Modificar Cliente" press="onEditCustomer1"/>
+    </VBox>
+
     </Page>
 </mvc:View>
